@@ -10,6 +10,9 @@ step 4:- Run this command to downlaod all the dependecy which are need for ADMIN
           
 Step 5:- If after all of this if you get error in your project then copy the error in ChatGPT. And ChatGPT give you how to resolve.
 Step 6:- If you get an error after all of this, contact me.
+Step 7:- For run ADMIN side project run this command.
+         " npm run dev"
+
 
 # FOR THE USER SIDE
 
@@ -23,5 +26,5 @@ Step 4:- Run this command for install all dependecy
         
 Step 5:- If after all of this if you get error in your project then copy the error in ChatGPT. And ChatGPT give you how to resolve.
 Step 6:- If you get an error after all of this, contact me.
-
-
+Step 7:- For run ADMIN side project run this command.
+         " npm start"
