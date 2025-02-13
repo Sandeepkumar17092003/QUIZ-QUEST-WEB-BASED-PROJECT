@@ -1,0 +1,248 @@
+.upload-notes-container{
+    /* width:100%; */
+    /* border:1px solid red; */
+    margin:1rem;
+
+}
+
+.form-section {
+    /* border: 1px solid #3b3b3b; Use a calm blue instead of red for a professional appearance */
+    border-radius: 0.5rem; /* Rounded corners for a modern look */
+    padding:1rem 1rem;
+    padding-bottom: 1rem;;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  */
+    background-color: #ffffff; /* White background for clarity */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); Soft shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+
+
+.form-section h4 { 
+    border-bottom: 2px solid #007BFF; /* Bottom border for a professional touch */
+    font-family: sans-serif; /* Clean, modern font */
+    text-align: center; /* Centered text */
+    color: #333; /* Dark text color for contrast */
+    padding: 0.2rem; /* Reduced padding */
+  
+}
+
+
+/* form section */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-row .form-group {
+    flex: 1; /* Allow the form group to grow and shrink */
+    max-width: 100%; /* Ensure it doesn't exceed parent width */
+}
+
+.form-row .form-group input {
+    flex-grow: 1;
+    margin-top: 0.6rem; /* Reset margin */
+    border: 1px solid #6a6a6a; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners */
+    width: 100%; /* Full width of the parent */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus */
+}
+
+.form-row .form-group input:focus {
+    border-color: #007BFF; /* Change to a blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a slight shadow */
+}
+
+.form-row .form-group input::placeholder {
+    color: #aaa; /* Light grey color for placeholders */
+    opacity: 1; /* Ensure full visibility */
+}
+
+.desc-button{
+    margin-top:0.6rem;
+    display:flex;
+    gap:10px;
+    
+}
+.form-group{
+    flex:1;
+}
+.form-group textarea{
+    border:1px solid #6a6a6a;
+    width:100%;
+}
+.form-group input[type="file"]{
+    background-color:#aaa;
+    padding:1rem;
+    border-radius: 0.5rem;
+    /* border:1px solid red; */
+    width:100%;
+}
+
+
+
+.submit-btn {
+    padding: 0.75rem 1.5rem;
+    margin-top: 0.6rem;
+    width: 100%;
+    background-color: blueviolet;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #7c3aed; /* A slightly darker shade of blueviolet */
+    animation: pulse 1.5s infinite;
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+    animation: none;
+}
+
+.submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.5); /* blueviolet with opacity */
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(138, 43, 226, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+    }
+}
+
+.uploaded-notes-section{
+    margin-top:1rem;
+    /* border:1px solid red; */
+    padding:10px;
+    border-radius: 0.5rem;
+}
+.head-1 button{
+    font-family: sans-serif;
+    width:3rem;
+    padding:0;
+    margin:0;
+    background-color: transparent;
+    color:blue;
+    text-decoration: underline;
+}
+.uploaded-notes-section h4{
+    border-bottom: 2px solid #007BFF; /* Bottom border for a professional touch */
+    font-family:sans-serif; /* Clean, modern font */
+    text-align: center; /* Centered text */
+    color: #333; /* Dark text color for contrast */
+    padding: 0.2rem; /* Reduced padding */
+    transition: color 0.3s ease, border-color 0.3s ease; 
+}
+
+
+.download_btn {
+    font-family: sans-serif;
+    color: black;
+    text-decoration: none;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    margin:0;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+  
+  }
+  
+  .download_btn:hover, .download-btn1:hover {
+    background-color: #bfdbfe;
+  }
+  .download-btn1 {
+    background-color: #dbeafe;
+    width:100%;
+    font-family: sans-serif;
+    color: black;
+    align-items: center;
+    padding: 0.5rem 0.3rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+  }
+  
+ .delete-btn1{
+    margin-top:1rem;
+    background-color: #dbeafe;
+    width:100%;
+    font-family: sans-serif;
+    color: black;
+    padding: 0.5rem 0.3rem;
+    align-items: center;
+    /* border:1px solid red; */
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+
+  }
+  
+  .delete-btn1:hover {
+    background-color: #fecaca;
+  }
+
+/* deletion pop up design */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .confirm-btn, .cancel-btn {
+    margin: 5px;
+  }
+  
+.table-responsive{
+    height:20rem;
+    overflow:auto;
+}
+/* end here */
+
+
+/* form media query */
+@media(max-width:660px){
+   .form-row{
+        flex-direction: column;
+    }
+    .desc-button{
+        flex-direction: column;
+    }
+    .form-group input[type="file"]{
+        background-color:white;
+        padding-left: 0;
+    }
+}
+/* form media query end here */

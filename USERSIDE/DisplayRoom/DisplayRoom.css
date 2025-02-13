@@ -1,0 +1,90 @@
+
+.room-list-container1 {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding:0 10px;
+}
+
+.room1 {
+    /* box-shadow: 0 0 3px black; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.room1 span {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.room1 span b {
+    font-family: sans-serif;
+    color: #555;
+    font-weight: 600;
+}
+
+.room1 button {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    background-color: #4a90e2;
+    color: white;
+}
+
+.room1 button:hover {
+    background-color: #3a7bc8;
+}
+
+/* Responsive Styles */
+.room-list-container1 .empty{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+
+@media (max-width: 768px) {
+    .room1 {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .room1 span {
+        margin-bottom: 0.5rem; /* Add some space between spans */
+    }
+
+    .room1 button {
+        width: 100%; /* Make the button full width */
+        margin-top: 0.5rem; /* Add some margin above the button */
+    }
+}
+
+@media (max-width: 480px) {
+    .room1 {
+        padding: 10px; /* Increase padding for touch targets */
+    }
+
+    .room1 span {
+        font-size: 1rem; /* Slightly increase font size for readability */
+    }
+
+    .room1 button {
+        padding: 0.6rem; /* Increase button padding for easier interaction */
+    }
+}

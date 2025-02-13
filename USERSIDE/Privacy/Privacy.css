@@ -1,0 +1,200 @@
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .privacy-policy-20 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+
+  .container-22 {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 0 20px;
+    /* border:1px solid red; */
+  }
+
+  .header-21 {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .header-21 h1 {
+    margin: 0 0 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .header-21 p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  .main-23 {
+    padding: 60px 0;
+  }
+
+  .policy-section-24,
+  .policy-section-25,
+  .policy-section-26,
+  .policy-section-27,
+  .policy-section-28,
+  .policy-section-29 {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .policy-section-24.visible,
+  .policy-section-25.visible,
+  .policy-section-26.visible,
+  .policy-section-27.visible,
+  .policy-section-28.visible,
+  .policy-section-29.visible {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .policy-section-24:hover,
+  .policy-section-25:hover,
+  .policy-section-26:hover,
+  .policy-section-27:hover,
+  .policy-section-28:hover,
+  .policy-section-29:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .policy-section-24 h2,
+  .policy-section-25 h2,
+  .policy-section-26 h2,
+  .policy-section-27 h2,
+  .policy-section-28 h2,
+  .policy-section-29 h2 {
+    color: #4f46e5;
+    border-bottom: 2px solid #a855f7;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .policy-section-24 p,
+  .policy-section-25 p,
+  .policy-section-26 p,
+  .policy-section-27 p,
+  .policy-section-28 p,
+  .policy-section-29 p,
+  .policy-section-24 ul,
+  .policy-section-25 ul,
+  .policy-section-26 ul,
+  .policy-section-27 ul,
+  .policy-section-28 ul,
+  .policy-section-29 ul {
+    font-size: 1.1rem;
+    color: #4b5563;
+  }
+
+  .policy-section-24 ul,
+  .policy-section-25 ul,
+  .policy-section-26 ul,
+  .policy-section-27 ul,
+  .policy-section-28 ul,
+  .policy-section-29 ul {
+    padding-left: 20px;
+    list-style-type: none;
+  }
+
+  .policy-section-24 li,
+  .policy-section-25 li,
+  .policy-section-26 li,
+  .policy-section-27 li,
+  .policy-section-28 li,
+  .policy-section-29 li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+  }
+
+  .policy-section-24 li::before,
+  .policy-section-25 li::before,
+  .policy-section-26 li::before,
+  .policy-section-27 li::before,
+  .policy-section-28 li::before,
+  .policy-section-29 li::before {
+    content: '✓';
+    color: #10b981;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-weight: bold;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .header-21 {
+      padding: 60px 0;
+    }
+
+    .header-21 h1 {
+      font-size: 2.5rem;
+    }
+
+    .header-21 p {
+      font-size: 1rem;
+    }
+
+    .policy-section-24,
+    .policy-section-25,
+    .policy-section-26,
+    .policy-section-27,
+    .policy-section-28,
+    .policy-section-29 {
+      padding: 30px;
+    }
+
+    .policy-section-24 h2,
+    .policy-section-25 h2,
+    .policy-section-26 h2,
+    .policy-section-27 h2,
+    .policy-section-28 h2,
+    .policy-section-29 h2 {
+      font-size: 1.6rem;
+    }
+
+    .policy-section-24 p,
+    .policy-section-25 p,
+    .policy-section-26 p,
+    .policy-section-27 p,
+    .policy-section-28 p,
+    .policy-section-29 p,
+    .policy-section-24 ul,
+    .policy-section-25 ul,
+    .policy-section-26 ul,
+    .policy-section-27 ul,
+    .policy-section-28 ul,
+    .policy-section-29 ul {
+      font-size: 1rem;
+    }
+  }

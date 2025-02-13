@@ -1,0 +1,116 @@
+.contain-all-things {
+    margin-bottom: 1rem;
+    height:100vh;
+}
+
+/* Title styling */
+.display_notes_here_all h4 {
+    font-family: 'Arial', sans-serif;           /* Clean sans-serif font */
+    font-weight: 700;                           /* Bold text for emphasis */
+    font-size: 1.2em;                           /* Increase font size */
+    text-transform: uppercase;                   /* Transform text to uppercase */
+    padding: 10px;                              /* Padding inside the border */
+    color: #fff;                                /* White text color for better contrast */
+    background-color: #4a90e2;                  /* Change to a blue background */
+    text-align: center;                         /* Center the text */
+    letter-spacing: 1px;                        /* Space between letters for a refined look */
+}
+
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;                    /* Align to the start vertically */
+    flex-wrap: wrap;                            /* Allow wrapping of cards */
+}
+
+/* Card design */
+.note-card {
+    background-color: #fff;
+    margin: 1rem;                               /* Margin around the card */
+    border-radius: 12px;                        /* Rounded corners for smooth edges */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    padding: 15px;                              /* Padding inside the card */
+    display: flex;                              /* Flex for alignment */
+    flex-direction: column;                     /* Stack content vertically */
+    align-items: flex-start;                    /* Align content to the left */
+    position: relative;                         /* For any absolute positioning needs */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    
+    /* Allow height to be dictated by content */
+    height: auto;                               /* Set to auto to accommodate variable content */
+    width: 100%;                                /* Take full width */
+    max-width: 250px;                           /* Set a maximum width */
+    overflow: hidden;                           /* Prevent overflow of content */
+}
+
+.note-card:hover {
+    transform: translateY(-5px);                /* Slightly lift the card on hover */
+}
+
+.note-card .file {
+    font-size: 1rem;                            /* Set a comfortable font size */
+    font-weight: 600;                           /* Bold font for emphasis */
+    color: #333;                                /* Dark gray color for text */
+    margin-bottom: 4px;                         /* Reduced space below the file name */
+    overflow-wrap: break-word;                  /* Ensure long file names break properly */
+}
+
+.button-group {
+    display: flex;                              /* Flex to align buttons side by side */
+    gap: 10px;                                  /* Reduced space between buttons */
+    margin-top: 4px;                           /* Reduced space above the button group */
+    margin-bottom: 0;                           /* Remove space below the button group */
+}
+
+.view-btn, .download-btn {
+    padding: 8px 10px;                         /* Reduced padding for buttons */
+    font-size: 0.9rem;                          /* Slightly smaller font size */
+    border-radius: 6px;                         /* Rounded corners for buttons */
+    text-align: center;                         /* Center the text inside button */
+    cursor: pointer;                            /* Pointer cursor for buttons */
+    font-weight: 600;                           /* Bold text for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;                      /* Remove underline */
+}
+
+.view-btn {
+    background-color: #4a90e2;                  /* Blue background for view button */
+    color: #fff;                                /* White text */
+    border: 2px solid #4a90e2;                  /* Border same as background */
+}
+
+.view-btn:hover {
+    background-color: #357ABD;                  /* Darken the blue on hover */
+    transform: translateY(-2px);                /* Slight lift on hover */
+}
+
+.download-btn {
+    background-color: #50C878;                  /* Green background for download */
+    color: #fff;                                /* White text */
+    border: 2px solid #50C878;                  /* Green border */
+}
+
+.download-btn:hover {
+    background-color: #3CA165;                  /* Darken green on hover */
+    transform: translateY(-2px);                /* Slight lift on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .contain {
+        flex-direction: column;                  /* Stack cards vertically on small screens */
+    }
+    .note-card {
+        max-width: 80%;                          /* Full width on small screens */
+        margin: 1rem 0;                         /* Margin top and bottom for spacing */
+        height: auto;                           /* Allow auto height for smaller screens */
+    }
+    .display_notes_here_all h4 {
+        font-size: 1.1em;                       /* Slightly smaller title font */
+        padding: 8px;                           /* Reduce padding for smaller screens */
+    }
+    .view-btn, .download-btn {
+        padding: 6px 10px;                     /* Further reduce padding on buttons */
+        font-size: 0.8rem;                      /* Smaller font size for buttons */
+    }
+}

@@ -1,0 +1,439 @@
+/* Ensure the header is properly positioned */
+.Header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: sticky;
+    z-index: 1000;
+    background-color: white;
+    /* Added box-shadow for better separation */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+/* Navbar styles */
+.Header .NavBar {
+    /* box-shadow: 0px 1px 12px rgba(0,0,0,0.1); */
+    position:sticky;
+}
+
+/* Container for the Navbar */
+.Header .NavBar .Navbar-contain {
+    padding: 01rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo styling */
+.Header .NavBar .Navbar-contain .logo_name1 {
+    padding-left: 0.65rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Header .NavBar .Navbar-contain .logo {
+    display: none; /* Hide the logo if not needed */
+    width: 3.2rem;
+    border-radius: 50%;
+    /* animation: rotate 2s linear infinite; */
+}
+
+/* Text animation */
+.Header .NavBar .Navbar-contain .logo_name1 .text1 {
+    font-size: 20px; /* Adjusted font-size */
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
+    display: inline;
+}
+
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span {
+    opacity: 0;
+    animation: fadeInOut 6s infinite;
+}
+
+/* Keyframes for text animation */
+@keyframes fadeInOut {
+    0%, 90%, 100% { opacity: 0; }
+    15%, 30%, 45%, 60%, 75% { opacity: 1; }
+}
+
+/* Individual delays for each letter */
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(1) { animation-delay: 0s; }
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(2) { animation-delay: 0.5s; }
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(3) { animation-delay: 1s; }
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(4) { animation-delay: 1.5s; }
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(5) { animation-delay: 2s; }
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(6) { animation-delay: 2.5s; }
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(7) { animation-delay: 3.0s; }
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(8) { animation-delay: 3.5s; }
+.Header .NavBar .Navbar-contain .logo_name1 .text1 span:nth-child(9) { animation-delay: 4.0s; }
+
+/* Color styling for specific text */
+.Header .NavBar .Navbar-contain .logo_name1 .text1 .r {
+    color: orangered;
+}
+
+.Header .NavBar .Navbar-contain .Login_signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.Header .NavBar .Navbar-contain .Login_signup ul li {
+    list-style-type: none;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.Header .NavBar .Navbar-contain .Login_signup ul li a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.8s ease;
+}
+
+.Header .NavBar .Navbar-contain .Login_signup ul li a:hover {
+    color: red;
+   
+}
+.notificationNavbar{
+    display:flex;
+    gap:2rem;
+    align-items: center;
+    cursor:pointer
+}
+
+
+.after-login {
+    background-color: rgb(84, 84, 84);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer; /* Indicate it's clickable */
+    position: relative; /* Ensure the dropdown is positioned relative to this */
+}
+.after-login:hover{
+    background-color: rgb(58, 58, 58);
+}
+/* Container for the dropdown menu and trigger button */
+.user-dropdown-container {
+    position: relative;
+    display: inline-block; /* Adjust as necessary for your layout */
+    display: flex;
+    /* border:1px solid red; */
+    gap:30px;
+    justify-content:center;
+    align-items: center;
+
+}
+.profile {
+    position: absolute; /* Position dropdown relative to trigger */
+    top: 100%; /* Place the dropdown directly below the trigger */
+    right: 0; /* Align the dropdown with the right edge of the trigger */
+    background-color: lightgrey;
+    border-radius: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* Hide initially */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    width: max-content; /* Adjust width based on content */
+    max-width: 200px; /* Optional: Set a max-width to prevent overflow */
+    padding-bottom:0;
+    outline:none;
+    display:none;
+}
+
+.profile.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Show the dropdown */
+    display:block;
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjust based on dropdown padding */
+    right: 10px; /* Position the arrow horizontally centered above the dropdown */
+    border-width: 10px; /* Size of the arrow */
+    border-style: solid;
+    border-color: transparent transparent lightgrey transparent; /* Arrow color */
+}
+.profile .username {
+    padding-top:0.5rem;
+    text-align:center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem; /* Space between username and email */
+}
+
+.profile .email {
+    text-align:center;
+    font-size: 0.75rem;
+    word-break: break-word;
+    padding:0 0.5rem;
+}
+.logout-link {
+    width: 100%;
+    border-top: 1px solid rgb(0, 0, 0); 
+    display: block; 
+    text-align: center; 
+    color: black; 
+    text-decoration: none; 
+    background-color: rgba(52, 51, 49, 0.683);
+    padding-left: 0;
+    margin-left: 0;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    padding-bottom:0;
+    margin-bottom:0;
+    transition: none; 
+}
+
+.logout-link:hover {
+    color: red; 
+    transform:none;
+}
+
+
+.Header .NavBar .Navbar-contain .menu_icon {
+    display: none;
+}
+
+/* Sidebar styles */
+.sideBar {
+    width: 16.7rem;
+    height: 100vh;
+    z-index: 1200;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color:rgb(17,52,77);
+    overflow-y: auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.sideBar.active {
+    left: -17rem;
+}
+
+.sideBar .logoandtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.sideBar .logoandtext .logo-container {
+    border-radius: 50%;
+    width: 70px;
+    /* border:1px solid red; */
+}
+
+.sideBar .logoandtext .logo-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+/* Keyframes for rotation animation */
+/* @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+} */
+
+.sideBar .logoandtext .logo-text {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 600;
+    /* border:1px solid red; */
+    width:100%;
+    border-bottom:1px solid #f1f1f1;
+    margin-bottom: 0.4rem;
+
+}
+
+.sideBar .logoandtext .logo-text span {
+    color: orangered;
+}
+
+.sideBar .sidebar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sideBar .sidebar-container .link-tag {
+    font-family: sans-serif;
+    font-weight: 600;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sideBar .sidebar-container .link-tag:hover {
+    background-color: #c2c1c1; /* Change to desired active link background */
+    color: black; 
+    border-radius: 15px;
+    /* transform: translateX(10px); */
+}
+
+.sideBar .sidebar-container .close-btn {
+    border: none;
+    font-size: 1.5rem;
+    /* border:1px solid red !important; */
+    cursor: pointer;
+    color: white !important;
+    top: 0;
+    position: absolute;
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    body {
+        padding-left: 0;
+    }
+
+    .sideBar {
+        left: -17rem;
+        transition: 0.2s linear;
+    }
+
+    .sideBar.active {
+        left: 0;
+    }
+
+    .Header .NavBar .Navbar-contain {
+        font-size: 25px;
+        padding: 7px 10px;
+        background-color: #f1f1f1;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+
+    .sideBar a {
+        display: block;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .Header .NavBar .Navbar-contain .menu_icon {
+        font-size: 20px;
+        padding-right: 0;
+        margin-right: 3px;
+        display: block;
+    }
+
+    .sideBar .sidebar-container .close-btn {
+        display: block;
+        /* border:1px solid red !important; */
+        background-color: transparent;
+        text-align:right;
+        width:95%;
+        outline: none;
+        border: none;
+    }
+
+    .Header .NavBar .Navbar-contain .LoginMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .Header .NavBar .Navbar-contain .logo {
+        display: block;
+    }
+}
+@media (max-width: 400px) {
+    .sideBar .logoandtext .logo-text{
+        border:none;
+        margin-bottom: 1rem;;
+    }
+    .Header{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .user-dropdown-container{
+        gap:20px;
+    }
+    .sideBar a {
+        padding: 15px; /* Increased padding for touch-friendly links */
+    }
+    .Header .NavBar .Navbar-contain .logo_name1{
+        padding-left:0;
+    }
+    .logo_name1 {
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center logo and text */
+    }
+
+    .logo_name1 img {
+        display: block;
+        width: 40px; /* Adjust logo size if needed */
+    }
+
+    .logo_name1 .text1 {
+        font-size: 18px; /* Adjust font size for better readability on small screens */
+    }
+
+    .Content-contain {
+        padding: 0;
+        margin: 0 10px; /* Reduced margin for better fit on small screens */
+        border: 1px solid red; /* Retain for debugging */
+    }
+
+    .Header .NavBar .Navbar-contain .LoginMenu .Login_signup a {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .profile {
+        width:9.5rem; /* Full width for very small screens */
+        min-width:9.5rem;
+        max-width: auto; 
+        box-shadow: none; 
+
+    }
+
+    .profile::before {
+        right: 10%; /* Center the arrow relative to the dropdown */
+        transform: translateX(50%); /* Center the arrow */
+        border-width: 6px; /* Smaller arrow for very small screens */
+    }
+}
+
+
+
+.sideBar .sidebar-container .link-tag.active {
+    background-color: #c2c1c1; /* Change to desired active link background */
+    color: black; /* Change to desired active link color */
+    border-radius: 0.5rem;
+    /* border: none; */
+  }
+  

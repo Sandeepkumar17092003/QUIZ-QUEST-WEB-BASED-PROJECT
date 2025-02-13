@@ -1,0 +1,148 @@
+.All-contain-leader {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 2rem 0;
+  border-radius: 0.4rem;
+}
+
+.head-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Adjust for smaller screens */
+}
+
+.subjects-scroll-container {
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center; /* Align items to the start of the scroll */
+  align-items: center; /* Vertically align the buttons */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  gap: 10px;
+  border-radius: 0.4rem;
+  padding: 10px;
+ 
+  white-space: nowrap; /* Prevent wrapping to the next row */
+}
+
+.subjects-scroll-container::-webkit-scrollbar {
+  height: 8px; /* Custom scrollbar height */
+}
+
+.subjects-scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc; /* Scrollbar thumb color */
+  border-radius: 4px;
+}
+
+.subjects-scroll-container::-webkit-scrollbar-track {
+  background: #f4f4f4; /* Scrollbar track color */
+}
+
+.subject-button {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.subject-button.active {
+  background-color: #7696b9;
+  color: #fff;
+  font-weight: bold;
+}
+
+.subject-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.con {
+  margin-top: 20px;
+}
+
+.con-table {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .subjects-scroll-container {
+    flex-wrap: nowrap; /* Prevent wrapping */
+    padding: 8px;
+    gap: 8px;
+    justify-content: flex-start; /* Align left */
+    overflow-x: auto; /* Ensure scrollable behavior remains */
+  }
+
+  .subject-button {
+    font-size: 0.8rem; /* Smaller text on smaller screens */
+    padding: 4px 8px;
+  }
+
+  .head-title {
+    font-size: 1.2rem;
+  }
+
+  table th, table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .All-contain-leader {
+    padding: 15px;
+    margin: 1rem 0;
+  }
+
+  .subjects-scroll-container {
+    padding: 5px;
+    gap: 5px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: flex-start;
+    overflow-x: auto; /* Horizontal scrolling always enabled */
+  }
+
+  .subject-button {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+
+  .head-title {
+    font-size: 1rem;
+  }
+
+  table th, table td {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+}
+
+
+.loading-container {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust as needed */
+  font-size: 1.2rem;
+  border: 1px solid #ddd;
+  color: #007bff;
+  border-radius: 0.4rem;
+}

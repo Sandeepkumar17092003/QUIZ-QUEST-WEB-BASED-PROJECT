@@ -1,0 +1,581 @@
+/* Room.css */
+/* Room.css */
+
+/* Main container for rooms */
+.room-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    height:100vh;
+}
+
+/* Styling for the createRoom section */
+.createRoom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    width: 80%;
+}
+
+/* Hover effect for createRoom */
+.createRoom:hover {
+    transform: scale(1.01);
+}
+
+.createRoom .title-text-1 {
+    width: 100%;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 0.5rem;
+    font-family: 'Arial', sans-serif; /* Modern font */
+    font-size: 1.5rem; /* Increased font size for better visibility */
+    border-radius: 0.5rem; /* More rounded corners */
+    color: #333; /* Dark gray text color for better contrast */
+    text-align: center; /* Centered text */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    position: relative; /* For animation */
+}
+
+.createRoom .title-text-1:before {
+    content: ''; /* Adding a decorative element */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    height: 4px; /* Decorative bar height */
+    background-color: #007bff; /* Blue accent color */
+    transform: translateX(-50%); /* Center the bar */
+    animation: slide-in 0.5s ease; /* Animation for bar */
+}
+
+/* Form layout */
+.createRoom form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0; /* Added margin for spacing */
+}
+
+/* Input styling */
+.createRoom input {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    color: #333; /* Text color */
+}
+
+/* Input focus effect */
+.createRoom input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+}
+
+/* Button styling */
+.createRoom button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    width: 100%;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3); /* Subtle shadow */
+}
+
+/* Button hover effect */
+.createRoom button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4); /* Increased shadow on hover */
+}
+
+/* Button active effect */
+.createRoom button:active {
+    transform: translateY(0); /* Reset transform when clicked */
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* Lighter shadow when pressed */
+}
+
+/* ShowRoom section styling */
+.ShowRoom {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.ShowRoom .search-bar {
+    padding: 10px; /* Inner padding */
+    margin: 1rem; /* Space around the search bar */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  */
+    border-radius: 0.3rem; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    display: flex; /* Use flex to align items if you want to add a button */
+}
+
+/* Styling for the input field */
+.ShowRoom .search-bar input[type="text"] {
+    width: 100%; /* Full width */
+    font-family: sans-serif; /* Font family */
+    padding: 12px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 0.3rem; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    outline: none; /* Remove default outline */
+}
+
+/* Focus effect for the input */
+.ShowRoom .search-bar input[type="text"]:focus {
+    border-color: #007BFF; /* Blue border on focus */
+}
+
+/* Optional: Style for a search button (if needed) */
+.ShowRoom .search-bar button {
+    padding: 12px 20px; /* Padding inside the button */
+    margin-left: 10px; /* Space between input and button */
+    border: none; /* Remove default border */
+    border-radius: 0.3rem; /* Rounded corners */
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for effects */
+}
+
+/* Hover effect for the button */
+.ShowRoom .search-bar button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Individual room styling */
+.room {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Buttons in the room */
+.room-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Room action button styling */
+.room-buttons button {
+    padding: 8px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+/* Action button hover effect */
+.room-buttons button:hover {
+    background-color: #218838;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .room-container {
+        padding: 10px;
+    }
+
+    .createRoom input,
+    .createRoom button {
+        font-size: 14px;
+    }
+
+    .createRoom {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .ShowRoom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ShowRoom .room {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding: 10px;
+    }
+
+    .ShowRoom .room span {
+        font-size: 1.2rem;
+        font-family: sans-serif;
+    }
+
+    .ShowRoom .room .room-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ShowRoom .search-bar {
+        width: 100%;
+        margin-top: 0;
+        box-shadow: none;
+    }
+
+    .ShowRoom .search-bar input[type="text"] {
+        font-size: 0.8rem;
+    }
+}
+
+/* Modal styles */
+.modal {
+    padding-left: 9rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+/* Centering modal content */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Updated to fit better on small screens */
+    max-width: 400px; /* Maintain a max width for larger screens */
+    animation: scaleIn 0.3s;
+
+    overflow-wrap: break-word; /* Break long words */
+    word-wrap: break-word;     /* Fallback for older browsers */
+    word-break: break-word;    /* Ensures long words break */
+    box-sizing: border-box;    /* Includes padding in width calculations */
+    overflow: hidden; 
+}
+
+/* Modal animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+.modal-content h6 {
+    padding: 0;
+    margin: 0;
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+    padding: 10px 10px;
+    border-radius: 0.5rem;
+    font-family: sans-serif;
+    background-color: #265b94;
+    color: white;
+    box-shadow: 0 4px 10px black;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    text-align: left; /* Align text to the left */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+    border-radius: 0.5rem; /* Slightly more rounded corners */
+    background-color: #ffffff; /* Light background for contrast */
+    color: #333; /* Dark text for better readability */
+    font-size: 16px; /* Adjust font size for clarity */
+    line-height: 1.5; /* Improve readability with line height */
+    margin: 0; /* Remove default margins */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition effects */
+}
+
+.modal-content .time-number {
+    margin-left: 0;
+    background-color: #ddd;
+    border-radius: 0.5rem;
+    display: flex;
+    box-shadow: inset 0 4px 10px rgb(87, 87, 87);
+    justify-content: space-between; /* Aligns children to left and right */
+    padding: 0.5rem; /* Optional: Adds some padding for better spacing */
+}
+
+.modal-content .time-number p:nth-of-type(1) {
+    background-color: #ddd;
+    outline: none;
+    border: none;
+    margin: 0; /* Optional: Removes default margin for better alignment */
+}
+
+.modal-content .time-number p:nth-of-type(2) {
+    outline: none;
+    border: none;
+    height: 100%;
+    text-align: center;
+    background-color: #ddd;
+    padding-left: 1rem; /* Keep padding if needed */
+    margin: 0; /* Optional: Removes default margin for better alignment */
+}
+
+.modal-content p:hover {
+    transform: scale(1.02); /* Slightly scale up on hover for emphasis */
+}
+
+.modal-content p:nth-of-type(1) {
+    color: black;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+.modal-content p:nth-of-type(2) {
+    color: black;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    box-shadow: none;
+}
+
+.modal-content h5 {
+    color: rgb(0, 0, 0);  /* Sets the color of the question text */
+    display: flex;  /* Uses flexbox for horizontal alignment */
+    margin-top: 1rem;  /* Adds margin at the top */
+    border-radius: 0.5rem;  /* Rounds the corners of the element */
+    font-family: sans-serif;  /* Sets the font family */
+    font-weight: 600;  /* Sets the font weight */
+    text-align: left;  /* Aligns text to the left */
+}
+
+.modal-content .q {
+    color:red;
+    display: inline-flex;  /* Change to inline-flex for alignment */
+    font-family: sans-serif;  /* Sets the font family */
+    font-weight: bold;  /* Makes the question number bold */
+    margin-right: 0.5rem;  /* Space between number and question */
+}
+.modal-content .q::after {
+    content: "."; /* Add the text you want after the question number */
+    color: red; /* Ensure the color matches */
+    font-weight: bold; /* Makes it bold */
+}
+.modal-content .q-print  {
+    text-align: left;  /* Align text to the left */
+   
+    padding: 0;  /* Removes padding */
+    font-family: sans-serif;  /* Sets the font family */
+    overflow: hidden;  /* Hides overflow content */
+    flex-grow: 1;  /* Allows the question text to take remaining space */
+}
+
+
+
+.modal-content .option {
+    display:flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 5px;
+    font-family: sans-serif;
+    margin-left: 1.8rem;
+}
+
+
+
+.modal-content input[type="radio"] {
+    margin-right: 0.7rem;
+    color: rgb(0, 55, 194);
+    font-weight: 700;
+}
+
+.modal-content label{
+    border:1px solid grey;
+    padding:0 10px;
+    border-radius: 0.3rem;
+    box-shadow: inset 0 5px 5px rgba(138, 135, 135, 0.2), 
+                inset 0 -2px 5px rgba(0, 0, 0, 0.2), 
+                inset 2px 0 5px rgba(0, 0, 0, 0.2), 
+                inset -2px 0 5px rgba(0, 0, 0, 0.2);
+
+   
+    background-color: #f9f9f9; /* Background for better visibility */
+}
+
+
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.navigation-buttons1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 4px;
+}
+
+.modal-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 760px) {
+    .modal {
+
+        padding-left: 0;
+    }
+   
+    
+}
+
+/* Result design Here */
+.Result {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 300px; /* Fixed width for consistency */
+    margin: 20px auto; /* Centering */
+    text-align: center; /* Centered text */
+}
+
+.Result h2 {
+    color: #333; /* Darker text color for title */
+    margin-bottom: 20px; /* Space below the title */
+    font-family: sans-serif; /* Font family */
+    font-weight: 700; /* Bold text */
+    position: relative; /* Position relative for the pseudo-element */
+    padding-bottom: 10px; /* Space between text and the underline */
+}
+
+/* Create a bottom line effect */
+.Result h2::after {
+    content: ''; /* Empty content for the pseudo-element */
+    display: block; /* Block to take full width */
+    width: 100%; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #007bff; /* Color of the underline */
+    margin: 0 auto; /* Center the underline */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Start from the left */
+    bottom: 0; /* Align to the bottom of the h2 */
+}
+
+.Result p {
+    color: #666; /* Medium gray for text */
+    margin: 5px 0; /* Space between paragraphs */
+}
+.Result p:nth-of-type(2){
+    color:red;
+}
+
+.Result button {
+    background-color: #4CAF50; /* Green background for the button */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 10px 20px; /* Spacing inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.Result button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.Result .progress-container {
+    background-color: #e0e0e0; /* Light gray for the progress container */
+    border-radius: 5px; /* Rounded corners for the container */
+    margin: 20px 0; /* Spacing above and below the progress bar */
+    height: 25px; /* Height of the progress bar */
+    overflow: hidden; /* Ensure the inner bar doesn't overflow */
+    position: relative; /* To position the progress bar */
+}
+
+.Result .progress-bar {
+    background-color: #00e7d4; /* Color of the progress bar */
+    height: 100%; /* Full height of the container */
+    text-align: center; /* Center text inside the bar */
+    line-height: 25px; /* Center text vertically */
+    color: rgb(0, 0, 0); /* White text for percentage */
+    font-weight: bold; /* Bold font for better visibility */
+    transition: width 0.4s ease; /* Smooth transition for width change */
+    position: absolute; /* Ensures it fills the container from the left */
+    left: 0; /* Start from the left */
+    top: 0; /* Align to the top */
+}
+
+/* Result design End Here */
+
+/* participants design  here */
+.participant{
+    border-radius:0.3rem;
+    
+}
+.participant h2{
+    /* border:1px solid red; */
+    font-family: sans-serif;
+    font-weight: 600;
+    color:white;
+    Background-color:rgb(67, 44, 67);
+    box-shadow: 0 0 10px black;
+    border-radius: 0.3rem;
+}
+.participant ul li{
+    list-style-type: none;
+    border:1px solid rgb(67, 44, 67);
+    border-radius: 0.3rem;
+    margin:7px;
+    box-shadow: 0 0 10px black;
+    text-align: left;
+    padding:0.3rem;
+}
+/* participants design end here */
+

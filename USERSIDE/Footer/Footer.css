@@ -1,0 +1,110 @@
+.footer-container {
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: #24262b;
+    overflow-x: hidden;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+footer{
+    background-color: #24262b;
+}
+.footerContainer{
+    width: 100%;
+    padding-top: 30px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width:2rem;
+    height:2rem;
+    display:flex;
+    align-items: center;;
+    justify-content: center;
+}
+.socialIcons a i{
+    font-size: 1em;
+    color: #ffffff;
+    opacity: 0,9;
+
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+   background-color: white;
+    
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color:black;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 19px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 14px;
+    text-decoration: none;
+    font-size: 0.8em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #24262b;
+    padding: 10px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+    font-size:0.6em;
+}
+
+@media (max-width: 700px){
+    .footer-container{
+        overflow-x:hidden;
+    }
+    
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        text-align: center;
+        margin: 10px;
+        font-size:15px;
+    }
+    .footerNav ul li a{
+        font-size:16px;
+    }
+    .footerBottom p{
+        font-size:15px;
+    }
+    .socialIcons{
+        gap:1rem;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+        width:2.5rem;
+        height:2.5rem;
+        
+    }
+    .socialIcons a i{
+        font-size:20px;
+    }
+}
