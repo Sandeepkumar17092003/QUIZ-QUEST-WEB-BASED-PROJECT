@@ -1,0 +1,93 @@
+
+  
+  /* Title of the section */
+  .titleText {
+    font-size: 22px;
+    color:grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title{
+    display: inline-block;
+    border-bottom: 2px solid grey;;
+  }
+  .textButton {
+    cursor: pointer;
+    color:grey;
+    font-size:1.2rem;
+    font-weight: bold;
+    border-bottom:2px solid grey;
+  }
+  
+  /* Container to display playlists */
+  .playlists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
+  /* Each individual playlist item */
+  .playlistItem {
+    width: calc(33% - 20px); /* Three items per row (adjust if needed) */
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    border:1px solid rgb(192, 192, 192);
+    transition: transform 0.3s;
+  }
+  
+  .playlistItem:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Playlist thumbnail styling */
+  .playlistThumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Playlist name and owner name */
+  .playlistItem h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .playlistItem p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Buttons for actions */
+  .playlistActions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .deleteBtn {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .deleteBtn:hover {
+    background-color: #c82333;
+  }
+  .ButtonHide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }

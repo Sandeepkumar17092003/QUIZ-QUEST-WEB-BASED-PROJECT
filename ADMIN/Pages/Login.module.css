@@ -1,0 +1,151 @@
+.container {
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .formContainer {
+    margin-top:2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    border:1px solid grey;
+  }
+  
+  .title {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  
+  .inputGroup label {
+    font-family: sans-serif;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .inputGroup input {
+    padding: 0.75rem;
+    font-family: sans-serif;
+    border-radius: 0.25rem;
+    border: 1px solid grey;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputGroup input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  .button {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    background-color: #4a90e2;
+    font-family: sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #3a7bc8;
+  }
+  .Text {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+    color: #555;
+  }
+  
+  .Text .link {
+    
+    margin-left: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .Text .link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .form {
+      width: 100%;
+    }
+  }
+  
+  
+  /* Loading Spinners */
+  /* Overlay for loading */
+.loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+  font-size: 18px;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* End here */

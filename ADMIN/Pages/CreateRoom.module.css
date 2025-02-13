@@ -1,0 +1,286 @@
+.createRoom {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.titleText1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 50px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+.form input {
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: 1px solid grey;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submitBtn {
+  background-color: #007BFF !important;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+.showRoom {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 20px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid grey;
+  box-sizing: border-box;
+}
+
+.searchBar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: 1px solid grey;
+  box-sizing: border-box;
+}
+
+.room {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  /* border: 1px solid grey; */
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.1), 1px 0px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  font-family:sans-serif
+
+}
+
+.roomHeader {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.roomButtons {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.roomButtons button {
+  padding: 8px;
+  background-color: rgb(21, 136, 21) !important;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease, transform 0.2s ease; */
+}
+
+.roomButtons button:hover {
+  background-color: rgb(16, 111, 16);
+  /* transform: scale(1.05); */
+}
+
+@media (max-width: 768px) {
+  .createRoom,
+  .showRoom {
+    padding: 20px;
+  }
+
+  .form {
+    padding: 30px;
+    width: 100%;
+  }
+
+  .titleText1 {
+    font-size: 1.5rem;
+  }
+
+  .room {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .roomHeader {
+   
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    
+  }
+
+  .roomButtons {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .createRoom,
+  .showRoom {
+    padding: 10px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .titleText1 {
+    font-size: 1.2rem;
+  }
+
+  .roomButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .roomButtons button {
+    width: 100%;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top */
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px; /* Max width for larger screens */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease, transform 0.2s ease; */
+}
+.buttonCollect{
+  display:flex;
+  justify-content: space-between;
+  margin-top:1rem;
+}
+.closeQuestionButton{
+  background-color:red;
+}
+button:hover {
+  background-color: #0056b3;
+  /* transform: scale(1.01); */
+}
+.closeParticipant{
+  background-color: red;
+  width:5rem;
+}
+
+
+/* Responsive styles for small devices */
+@media (max-width: 768px) {
+  .modalContent {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  input, button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalContent {
+    width: 95%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  input, button {
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,159 @@
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.left, .middleCenter {
+  flex: 1;
+  min-width: 80px;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.time {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  font-size: 1rem;
+}
+
+/* Adjustments for the rightmost section */
+
+.right{
+  background-color: #f3f3f3;
+  border-radius:4px;
+  padding:5px;
+  border:1px solid rgb(180, 180, 180);;
+  height:8rem;
+  width:14rem;
+  overflow-y: auto;
+}
+.right .textTitle{
+font-weight: 700px;
+}
+
+.room {
+  margin-top: 0.5rem;;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size:0.9rem;
+  
+}
+
+
+.resultButton {
+  padding: 5px 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resultButton:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ContainNotify{
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .left, .middleCenter {
+    flex-basis: 100%;
+  }
+
+  .right {
+    flex-basis: 100%;
+    padding: 1rem;
+  }
+
+  .time {
+    font-size: 1.2rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+  }
+}
+
+
+.ContainNotify{
+  display:flex;
+  padding:30px;
+  /* border:1px solid red; */
+  gap:1rem;
+}
+.ContainNotify1{
+  flex:1;
+  padding:10px;
+  border:1px solid grey;
+  border-radius:0.3rem;
+  height:15rem;
+  overflow:auto;
+}
+.notTitle{
+  /* text-align: center; */
+  display:inline-block;
+  color:rgb(112, 111, 111);
+  font-size: 1.4rem;
+  border-bottom: 2px solid rgb(148, 148, 148);
+}
+.notContain{
+  display:flex;
+  margin-top: 2rem;
+  gap:1rem;
+}
+.textArea{
+  height:6rem;
+  overflow-y: auto;
+}
+.textArea:focus{
+  outline:none;
+}
+
+.ContainNotify2{
+  border:1px solid grey;
+  padding:10px;
+  flex:1;
+  border-radius:0.3rem;
+}
+.roomHeader{
+  display: flex;
+  gap:1rem;
+}

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.MainContainer {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.MainContainer .LeftDiv {
+  width: 20%;
+  height: 100vh;
+  position: fixed; /* Keep the sidebar fixed */
+
+  background-color: #f4f4f4; /* Background color for visibility */
+}
+
+.MainContainer .RightDiv {
+  margin-left: 20%; /* Offset for the fixed sidebar */
+  width: 80%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+.MainContainer .RightDiv1 {
+  /* border: 1px dotted rgb(0, 0, 0); */
+  position: fixed;
+  width: 80%; /* Match RightDiv width */
+  height: 3.5rem; 
+}
+
+.MainContainer .RightDiv2 {
+  margin-top: 3.7rem;
+  width: 100%; /* Ensure alignment with RightDiv */
+}
+
+/* When screen width is 768px or less */
+@media screen and (max-width: 1068px) {
+  .MainContainer .LeftDiv {
+    display: none; /* Hide the sidebar */
+  }
+
+  .MainContainer .RightDiv,
+  .MainContainer .RightDiv1,
+  .MainContainer .RightDiv2 {
+    margin-left: 0;
+    width: 100%; /* Full width for RightDiv */
+  }
+}

@@ -1,0 +1,112 @@
+:root {
+  --primary-color: #3a4f7a;
+  --secondary-color: #fbc252;
+  --background-color: #f8f9fa;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-background: #ffffff;
+}
+
+.feedbackDisplayContainer {
+  max-width: 1200px;
+  padding: 2rem;
+  z-index: 1; /* Ensure the feedback content stays below the popup */
+}
+
+.feedbackList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.feedbackItem {
+  flex: 1 1 400px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding: 10px;
+ 
+  background-color: var(--card-background);
+  box-shadow: 0 0 5px var(--shadow-color);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.feedbackItem:hover {
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.displayFeedbackInput {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feedbackHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedbackUserStrong {
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.menuWrapper {
+  position: relative; /* Required for menu dropdown positioning */
+}
+
+.menuButton {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.menuButton:hover {
+  color: var(--secondary-color);
+}
+
+.deleteOption {
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: var(--card-background);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1; /* Ensure delete options appear below the popup */
+  margin-right: 0.3rem;
+}
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  color: red;
+}
+
+@media (max-width: 1079px) {
+  .feedbackDisplayContainer {
+    padding: 1rem;
+  }
+
+  .feedbackItem {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feedbackItem {
+    max-width: calc(50% - 1.334rem);
+  }
+}

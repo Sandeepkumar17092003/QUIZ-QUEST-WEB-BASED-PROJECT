@@ -1,0 +1,61 @@
+.Sidebar {
+  background-color: #1f2b48;
+  height: 100vh;
+}
+
+.Sidebar .Logo {
+  color: orangered;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+  padding:0.87rem;
+}
+
+.NavbarItems {
+  padding-top: 2rem;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.NavbarItems .NavbarText {
+  display: flex; /* Flex container for alignment */
+  align-items: center; /* Align items vertically in the center */
+  color: white;
+  font-family: sans-serif;
+  margin-right: 1.5rem;
+  border: 1px solid transparent; /* Transparent border to maintain dimensions */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+.NavbarItems .NavbarText:hover {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background change on hover */
+}
+
+.NavbarItems .NavbarText .Icon {
+  display: inline-flex; /* Ensure it behaves as an inline-flex item */
+  align-items: center; /* Center content inside the Icon */
+  font-size: 24px;
+  margin-right: 10px; /* Gap between the icon and the text */
+}
+
+.NavbarItems .NavbarText .Link {
+  color: white;
+  text-decoration: none;
+  display: inline-flex; /* Ensure it behaves as an inline-flex item */
+  align-items: center; /* Center content inside the Link */
+  padding: 8px 10px;
+}
+
+/* Active state for any active link */
+.NavbarItems .NavbarText .Link.Active {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* border: 1px solid grey;  */
+  border-radius: 8px; /* Keep the border-radius consistent */
+}

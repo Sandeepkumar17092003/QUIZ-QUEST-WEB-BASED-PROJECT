@@ -1,0 +1,304 @@
+.uploadNotesContainer {
+
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* UploadNotes.module.css */
+.formSection {
+  padding:20px;
+  width:70%;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  border:1px solid grey;
+  border-radius: 8px;
+
+  
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.formDesign {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formControl {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.formControl:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.formControl::placeholder {
+  color: #6c757d;
+}
+
+textarea.formControl {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formGroup .formControlFile {
+  margin-top:1rem;
+  width:33%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+
+.submitBtn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .formSection {
+    padding: 1.5rem;
+  }
+
+  .formTitle {
+    font-size: 1.25rem;
+  }
+
+  .formControl,
+  .fileUploadLabel,
+  .submitBtn {
+    font-size: 0.875rem;
+  }
+}
+
+
+  
+  .uploadedNotesSection {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin:0.5rem;
+  }
+  
+  .head1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom:1px solid grey;
+  }
+  
+  .head1 h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .head1 .HideAndShow {
+    background-color: none !important;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .tableResponsive {
+    overflow-x: auto;
+  }
+  
+  .notesTable {
+    width: 100%;
+    border-collapse: collapse;
+    overflow:auto;
+  }
+  
+  .notesTable th,
+  .notesTable td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9rem;
+  }
+  
+  .notesTable th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .downloadBtn1,
+  .deleteBtn1 {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  
+  .downloadBtn1 {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .deleteBtn1 {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .downloadBtn {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .modalContent h5 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  .modalContent input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+  }
+  
+  .confirmBtn,
+  .cancelBtn {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    width: calc(50% - 1rem);
+  }
+  
+  .confirmBtn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .cancelBtn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .uploadNotesContainer {
+      max-width: 90%;
+      padding: 2rem;
+    }
+  
+   
+  
+    .formRow {
+      flex-direction: row;
+    }
+  
+    .formGroup {
+      flex: 1;
+      min-width: 200px;
+    }
+  
+    .formControlFile {
+      width: 30%;
+    }
+  
+    .submitBtn {
+      width: auto;
+    }
+  
+    .head1 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .head1 button {
+      width: auto;
+    }
+  
+    .downloadBtn1,
+    .deleteBtn1 {
+      width: auto;
+      margin-bottom: 0;
+    }
+  
+    .modalContent {
+      padding: 2rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .uploadNotesContainer {
+      max-width: 1200px;
+    }
+  }
+  
